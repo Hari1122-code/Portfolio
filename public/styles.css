@@ -1,0 +1,439 @@
+*{
+    
+    scroll-behavior: smooth;
+}
+body{
+    margin: 0;
+    font-family: sans-serif;
+    font-size: 22px;
+}
+.app{
+    padding: 0rem 3.5rem;
+}
+button{
+    border-radius: 20px;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+button:hover {
+    color: black;
+    cursor: pointer;
+}
+/* *******************************Header************************* */
+.nav{
+    /* height: 15vh; */
+    padding: 1em 0;
+    display: flex;
+    justify-content: space-between;
+}
+.menuButton{
+    display: none;
+}
+.n-left{
+    display: flex;
+    flex:1;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.5rem;
+}
+.toggle{
+    font-weight: bold;
+    align-items: center;
+}
+.n-list{
+    flex:10;
+}
+.n-list ul{
+    list-style-type: none;
+    display: flex;
+    gap: 4rem;
+    /* margin-left: 1rem; */
+    font-weight: bold;
+}
+.n-list ul li a{
+    text-decoration: none;
+    color: black;
+}
+.n-list ul li a:hover{
+    cursor: pointer;
+    color: orange;
+}
+.n-right{
+    /* display: flex;
+    justify-content: center; */
+    margin: 0.5rem;
+}
+/* .menuButton{
+    display: flex;
+    align-items: center;
+    margin-left: 2rem;
+} */
+.n-button{
+    background-color: orange;
+    border: 2px solid transparent;
+    padding: 0.5em;
+    
+}
+.n-button:hover{
+    border: 2px solid orange;
+    background-color: white;
+}
+
+/* *******************************Intro************************* */
+
+.intro{
+    display: flex;
+    height: 80vh;
+    
+}
+.i-left{
+    
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    width:35%;
+}
+.i-info{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+    height: 90%;
+}
+.i-info :nth-child(1){
+    width:45%;
+    border-radius: 50%;
+    align-self: center;
+}
+.i-left :nth-child(2){
+    /* height: 50px; */
+    color: black;
+    font-weight: 800;
+    font-size: 1.8rem;
+}
+.i-info :nth-child(3){
+    color :orange;
+    font-weight: bold;
+    /* font-size: 1.8rem;    */
+}
+.i-info :nth-child(4){
+    font-weight: 100;
+    font-size: 1rem;
+    color: gray;
+    /* margin-top: 10px; */
+    
+}
+
+
+.i-info button{
+    background-color: orange;
+    border: 2px solid transparent;
+    padding: 0.5em 1em;
+    margin: 0 auto;
+
+}
+.i-left button:hover{
+    border: 2px solid orange;
+    background-color: white;
+}
+.blur{
+    position: absolute;
+    width: 100%;
+    height: 40%;
+    border-radius: 50%;
+    background: rgb(244, 202, 160);
+    /* background: rgb(250, 182, 113); */
+    z-index: -9;
+    top: 0%;
+    left: 5%;
+    filter:blur(72px);
+
+}
+.i-icons{
+    height: 10%;
+    padding: 0.8em 0em 0em;
+    font-size: 1.5rem;
+}
+.i-icons a {
+    margin:0 0.4em;
+}
+.i-icons a *{
+    width: 10%;
+    height: 90%;
+}
+.i-right{ 
+    height: 100%;
+    width:65%;
+    display: flex;
+    flex-direction: row;
+    border-radius: 15px;
+    border: 2px solid orange;
+}
+.nav-menu{
+    background-color: orange;
+    /* width: 12rem; */
+    height: 100%;
+    border-radius: 13px 0 0 15px;
+    border: 2px solid orange;
+    border-right: none;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+.content{
+    /* background-color: aqua; */
+    font-size: 15px;
+    height: 100%;
+    width: 100%;
+    border-left: 0;
+    padding: 0 15px;
+    overflow-y: scroll;
+    /* overflow-y: hidden; */
+}
+/* ::-webkit-scrollbar {
+    display: none;
+} */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 10px 10px transparent;
+    border: solid 3px transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    box-shadow: inset 0 0 10px 10px gray;
+    border: solid 3px transparent;
+    border-radius: 50px; 
+}
+/* *****************************sidebar******************* */
+.s-menuitems{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 5px 0 0 5px;
+    border-radius: 5px;
+}
+.s-item{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    list-style: none;
+    margin: 15px 0;
+    padding-left: 5px;
+}
+.s-item a{
+    text-decoration: none;
+    display: flex;
+    padding: 5px 10px 5px 10px;
+    justify-content: start;
+    align-items: center;
+    border-radius: 15px 0 0 15px;
+    gap: 5px;
+    color: black;
+    font-size: 20px;
+    height: inherit;
+    height: 100%;
+    width: 100%;
+    text-transform: capitalize;
+}
+
+
+.active{
+    cursor: pointer;
+    background-color: white;
+}
+
+/* ******************************Content********************** */
+
+#home{
+    /* width: 100%; */
+    height: 100%;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    text-align: center;
+}
+#about{
+    padding: 2rem;
+}
+#skills{
+    min-height: 100%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.skilldiv{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.skilldivchild{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 1rem;
+}
+
+h1,h2,p{
+    margin: 0;
+}
+/* ********************************projects******************** */
+#projects{
+    min-height: 100%;
+    padding: 1rem;
+}
+.projectsContent{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+.projectsContent-item{
+    width: 12em;
+    display: flex;
+    gap: 0.5rem;
+    justify-content: flex-start;
+    align-self: flex-start;
+    flex-direction: column;
+    margin: 1rem;
+}
+.projectsContent-item p{
+    color: gray;
+}
+.projectsContent-item img{
+    width: 100%;
+    height: 125px;  
+    border-radius: 15px;
+    object-fit: cover;
+}
+#contact{
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    text-align: center;
+}
+.contactchild h2{
+ margin: 1.5rem;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+/* #contacts h2 */
+
+/* *************************media query******************************* */
+
+@media (min-width: 768px ) and (  max-width: 1024px) {
+    
+    body{
+        font-size: 21px;
+    }
+    .sidebarpath{
+        display: none;
+    }
+    button{
+        font-size: 0.9rem;
+    }
+    .n-left{
+        font-size: 1.3rem;
+    }
+}
+@media (min-width: 425px ) and (max-width: 768px) {
+    body{
+        font-size: 20px;
+    overflow-y: scroll;
+    }
+    .sidebarpath{
+        display: none;
+    }
+    .app{
+        padding: 0rem 0.5rem;
+    }
+    .intro{
+        flex-direction: column;
+        align-items: center;
+        height: 100vh;
+    }
+    .menuButton{
+        display: contents;
+    }
+    .n-left{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .n-list ul{
+        list-style-type: none;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    .n-right{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .i-left,.i-right{
+        width: 95%;
+        margin-bottom:50px;
+    }
+}
+@media only screen and (max-width: 425px) {
+    body{
+        overflow-y: scroll;
+        font-size: 15px;
+    }
+    .sidebarpath{
+        display: none;
+    }
+
+    button{
+        font-size: 0.8rem;
+    }
+    .app{
+        padding: 0rem 0.5rem;
+    }
+    #home{
+        display: none;
+    }
+    .intro{
+        flex-direction: column;
+        height: 100%;
+    }
+    .menuButton{
+        display: contents;
+    }
+    .n-left{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .n-list ul{
+        list-style-type: none;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    .n-right{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .i-left,.i-right{
+        width: 100%;
+        margin-bottom:50px;
+    }
+    .nav-menu{
+        display: none;
+    }
+    .content{
+        overflow-y:visible;   
+    }
+}
